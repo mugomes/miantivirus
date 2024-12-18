@@ -91,3 +91,9 @@ Public Sub mnuApoie_Click()
   Shell "xdg-open \"https://www.mestredainfo.com.br/p/apoie.html\"" To sTerm
   
 End
+
+Public Sub URLLabel1_Click()
+
+  mnuApoie_Click
+
+End

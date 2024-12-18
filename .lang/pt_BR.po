@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: miantivirus 3.18.0\n"
-"POT-Creation-Date: 2024-08-29 18:08 UTC\n"
+"POT-Creation-Date: 2024-12-18 21:44 UTC\n"
 "PO-Revision-Date: 2024-08-26 14:58 UTC\n"
 "Last-Translator: Murilo Gomes Julio <contatomestredainfo@gmail.com>\n"
 "Language: pt_BR\n"
@@ -134,11 +134,6 @@ msgstr "Escanear E-mail"
 msgid "File Size for Scanning"
 msgstr "Tamanho do Arquivo para escaneamento"
 
-# gb-ignore
-#: FOpcoes.form:99
-msgid "M"
-msgstr ""
-
 #: FOpcoes.form:104
 msgid "0 = Any Size"
 msgstr "0 = Qualquer Tamanho"
@@ -167,19 +162,19 @@ msgstr "Carregando..."
 msgid "Files"
 msgstr "Arquivos"
 
-#: FVerificar.class:139
+#: FVerificar.class:140
 msgid "Do you want to delete the selected files?"
 msgstr "Deseja excluir os arquivos selecionados?"
 
-#: FVerificar.class:139
+#: FVerificar.class:140
 msgid "No"
 msgstr "Não"
 
-#: FVerificar.class:139
+#: FVerificar.class:140
 msgid "Yes"
 msgstr "Sim"
 
-#: FVerificar.class:142
+#: FVerificar.class:143
 msgid "Deleted"
 msgstr "Excluído"
 
