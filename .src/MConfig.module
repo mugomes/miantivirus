@@ -1,0 +1,22 @@
+' Gambas module file
+
+' Copyright (C) 2004-2024 Murilo Gomes Julio
+' SPDX-License-Identifier: GPL-2.0-only
+
+' Mestre da Info
+' Site: https://www.mestredainfo.com.br
+
+Public Sub get(nome As String, Optional valorpadrao As Variant) As Variant
+  
+  Return Settings[nome, valorpadrao]
+  
+End
+
+Public Sub set(nome As String, valor As Variant)
+  
+  Settings[nome] = valor
+  Settings.Save()
+  
+End
+
+

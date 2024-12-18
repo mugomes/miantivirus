@@ -1,0 +1,15 @@
+' Gambas class file
+
+' Copyright (C) 2004-2024 Murilo Gomes Julio
+' SPDX-License-Identifier: GPL-2.0-only
+
+' Mestre da Info
+' Site: https://www.mestredainfo.com.br
+
+Public Sub URLLabel1_Click()
+  
+  Dim sTerm As String = ""
+  
+  Shell "xdg-open \"https://www.mestredainfo.com.br\"" To sTerm
+  
+End

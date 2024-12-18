@@ -1,0 +1,230 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: miantivirus 3.18.0\n"
+"PO-Revision-Date: 2024-08-29 18:07 UTC\n"
+"Last-Translator: Murilo Gomes Julio <contatomestredainfo@gmail.com>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: FOpcoes.form:104
+msgid "0 = Any Size"
+msgstr "0 = Cualquier tamaño"
+
+#: FMain.form:41
+msgid "About"
+msgstr "Acerca de"
+
+#: FMain.form:51
+msgid "About MIAntivirus"
+msgstr "Acerca de MIAntivirus"
+
+#: FMain.form:68 FOpcoes.form:122
+msgid "Add"
+msgstr "Agregar"
+
+#: FMain.class:23
+msgid "Add file or folder?"
+msgstr "¿Agregar archivo o carpeta?"
+
+#: FMain.class:23
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: FVerificar.form:48
+msgid "Checking:"
+msgstr "De cheques:"
+
+#: FAtualizarDB.form:17
+msgid "Checking for updates"
+msgstr "Buscando actualizaciones"
+
+#: FOpcoes.form:78
+msgid "Check symbolic files"
+msgstr "Verificar archivos simbólicos"
+
+#: FOpcoes.form:54
+msgid "Check symbolic folders"
+msgstr "Verificar carpetas simbólicas"
+
+#: FAtualizarDB.class:29 FVerificar.class:119
+msgid "Completed!"
+msgstr "¡Terminado!"
+
+# gb-ignore
+#: FAbout.form:40
+msgid "Copyright (C) 2004-2024 Murilo Gomes Julio"
+msgstr ""
+
+#: FVerificar.class:142
+msgid "Deleted"
+msgstr "Eliminado"
+
+#: FOpcoes.form:72
+msgid "Detect PUA (Potentially Unwanted Application)"
+msgstr "Detectar PUA (aplicación potencialmente no deseada)"
+
+#: FAbout.form:46
+msgid "Developed by: Murilo Gomes Julio"
+msgstr "Developed by: Murilo Gomes Julio"
+
+#: FVerificar.class:139
+msgid "Do you want to delete the selected files?"
+msgstr "¿Quieres eliminar los archivos seleccionados?"
+
+#: FMain.class:23
+msgid "File"
+msgstr "Archivo"
+
+#: FMain.class:44
+msgid "File or folder already added!"
+msgstr "¡Archivo o carpeta ya agregado!"
+
+#: FVerificar.class:17
+msgid "Files"
+msgstr "Archivos"
+
+#: FOpcoes.form:90
+msgid "File Size for Scanning"
+msgstr "Tamaño de archivo para escanear"
+
+#: FMain.class:23
+msgid "Folder"
+msgstr "Carpeta"
+
+#: FOpcoes.form:38
+msgid "General"
+msgstr "General"
+
+#: FOpcoes.form:66
+msgid "Heuristic scanning"
+msgstr "Escaneo heurístico"
+
+#: FOpcoes.form:108
+msgid "Ignore"
+msgstr "Ignorar"
+
+#: FOpcoes.form:134
+msgid "Ignore Files"
+msgstr "Ignorar archivos"
+
+#: FOpcoes.form:112
+msgid "Ignore Folders"
+msgstr "Ignorar carpetas"
+
+#: FAbout.form:66
+msgid "License: GPL-2.0-only"
+msgstr "License: GPL-2.0-only"
+
+#: FVerificar.form:25
+msgid "List of Infected Files:"
+msgstr "Lista de archivos infectados:"
+
+#: FVerificar.class:15
+msgid "Loading..."
+msgstr "Cargando..."
+
+# gb-ignore
+#: FOpcoes.form:99
+msgid "M"
+msgstr ""
+
+# gb-ignore
+#: FAbout.form:56
+msgid "Mestre da Info"
+msgstr ""
+
+# gb-ignore
+#: .project:1 FAbout.form:17 FMain.form:21 FVerificar.form:14
+msgid "MIAntivirus"
+msgstr ""
+
+# gb-ignore
+#: FAbout.form:31
+msgid "MIAntivirus is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, only version 2 of the License.\n\nMIAntivirus is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details."
+msgstr ""
+
+#: FVerificar.class:139
+msgid "No"
+msgstr "No"
+
+#: FMain.form:36 FOpcoes.form:30
+msgid "Options"
+msgstr "Opciones"
+
+#: FMain.form:63 FOpcoes.form:117 FVerificar.form:37
+msgid "Remove"
+msgstr "Eliminar"
+
+#: FOpcoes.form:158
+msgid "Save"
+msgstr "Ahorrar"
+
+#: FMain.form:73 FOpcoes.form:42
+msgid "Scan"
+msgstr "Escanear"
+
+#: FOpcoes.form:48
+msgid "Scan compressed files"
+msgstr "Escanear archivos comprimidos"
+
+#: FOpcoes.form:60
+msgid "Scan hidden files"
+msgstr "Escanear archivos ocultos"
+
+#: FOpcoes.form:84
+msgid "Scan mail"
+msgstr "Escanear correo"
+
+#: FAbout.form:71
+msgid "Scans files and folders for viruses using ClamAV."
+msgstr "Analiza archivos y carpetas en busca de virus utilizando ClamAV."
+
+# gb-ignore
+#: .project:2
+msgid "Scans files and folders for viruses using ClamAV.\nThe MIAntivirus is under license GPL-2.0-only"
+msgstr ""
+
+#: FVerificar.form:42
+msgid "Select All"
+msgstr "Seleccionar todo"
+
+#: FMain.class:26 FOpcoes.class:97
+msgid "Select Files"
+msgstr "Seleccionar archivos"
+
+#: FMain.form:58
+msgid "Select files or folders"
+msgstr "Seleccionar archivos o carpetas"
+
+#: FMain.class:36 FOpcoes.class:80
+msgid "Select Folder"
+msgstr "Seleccionar carpeta"
+
+# gb-ignore
+#: FAbout.form:51
+msgid "Site:"
+msgstr ""
+
+#: FMain.form:44
+msgid "Support MIAntivirus"
+msgstr "Soporte MIAntivirus"
+
+#: FMain.form:26
+msgid "Tools"
+msgstr "Herramientas"
+
+#: FAtualizarDB.form:10 FMain.form:29
+msgid "Update Database"
+msgstr "Actualizar base de datos"
+
+#: FAbout.form:61
+msgid "www.mestredainfo.com.br"
+msgstr "www.mestredainfo.com.br"
+
+#: FVerificar.class:139
+msgid "Yes"
+msgstr "Sí"
+

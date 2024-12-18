@@ -1,0 +1,19 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,70,42)
+  Font = Font["12"]
+  Text = ("Update Database")
+  Icon = Picture["miantivirus.png"]
+  Resizable = False
+  { lblInfo Label
+    MoveScaled(1,1,68,4)
+    Font = Font["Bold"]
+    Text = ("Checking for updates") & "..."
+  }
+  { lstInfo ListBox
+    MoveScaled(1,5,68,35)
+    #Translate = False
+    ScrollBar = Scroll.Both
+  }
+}

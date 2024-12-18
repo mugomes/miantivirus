@@ -1,0 +1,148 @@
+' Gambas class file
+
+' Copyright (C) 2004-2024 Murilo Gomes Julio
+' SPDX-License-Identifier: GPL-2.0-only
+
+' Mestre da Info
+' Site: https://www.mestredainfo.com.br
+
+Public sArquivos As String[] = []
+
+Public Sub Form_Open()
+  
+  Dim c As String = "clamscan --verbose --recursive=yes --no-summary"
+  
+  lblInfo.Text = ("Loading...")
+  cvArquivosInfectados.Columns.Count = 2
+  cvArquivosInfectados.Columns[0].Text = ("Files")
+  cvArquivosInfectados.Columns[1].Text = ""
+  cvArquivosInfectados.Header = True
+  
+  If MConfig.get("pastasimbolica", True) = True Then 
+    c &= " --follow-dir-symlinks=1"
+  Endif
+  
+  If MConfig.get("arquivosimbolico", True) = True Then 
+    c &= " --follow-file-symlinks=1"
+  Endif
+  
+  If MConfig.get("pua", True) = True Then 
+    c &= " --detect-pua=yes --alert-broken=yes --alert-macros=yes"
+  Else 
+    c &= " --detect-pua=no --alert-broken=no --alert-macros=no"
+  Endif
+  
+  If MConfig.get("heuristica", True) = True Then 
+    c &= " --heuristic-alerts=yes"
+  Else 
+    c &= " --heuristic-alerts=no"
+  Endif
+  
+  If MConfig.get("arquivocompactado", True) = True Then  
+    c &= " --scan-archive=yes"
+  Else 
+    c &= " --scan-archive=no"
+  Endif
+  
+  If MConfig.get("arquivosocultos", True) = False Then  
+    c &= " --exclude=\"\\/\\.\""
+    c &= " --exclude-dir=\"\\/\\.\""
+  Endif
+  
+  If MConfig.get("mail", True) = True Then  
+    c &= " --scan-mail=yes"
+  Else 
+    c &= " --scan-mail=no"
+  Endif
+  
+  If MConfig.get("tamanho", 0) = 0 Then 
+  Else
+    c &= " --max-filesize=" & MConfig.get("tamanho", 20) & "M"
+  Endif
+  
+  If Not IsNull(MConfig.get("ignorarpastas")) Then 
+    For Each row As String In MConfig.get("ignorarpastas", [])
+      c &= " --exclude-dir=\"" & row & "\""
+    Next
+  Endif
+  
+  If Not IsNull(MConfig.get("ignorararquivos")) Then 
+    For Each row As String In MConfig.get("ignorararquivos", [])
+      c &= " --exclude=\"" & row & "\""
+    Next
+  Endif
+  
+  For Each row As String In sArquivos
+    c &= " \"" & row & "\""
+  Next
+  
+  Shell c For Read As "Process"
+  
+End
+
+Public Sub Process_Read()
+  
+  Dim sLine As String
+  Dim a As String[]
+  Dim filename As String = ""
+  Dim tipov As String = ""
+  Dim reg As RegExp
+  
+  sLine = Read #Last, -256
+  If Not IsNull(sLine) Then 
+    If sLine = "" Then 
+    Else
+      reg = New RegExp(sLine, "\\s/.*\\.(\\S+)")
+      If reg.Text = "" Then 
+      Else
+        filename = Trim(Replace(reg.Text, "Scanning", ""))
+        lblInfo.Text = filename
+      Endif 
+      
+      reg = New RegExp(sLine, "\\/.*\\sFOUND")
+      If reg.Text = "" Then  
+      Else
+        a = Split(reg.Text, ":")
+        filename = Trim(a[0])
+        tipov = Trim(Replace(a[1], "FOUND", ""))
+        
+        cvArquivosInfectados.Add(filename, filename)
+        cvArquivosInfectados[filename][1] = tipov
+      Endif
+    Endif
+  Endif   
+  
+End
+
+Public Sub Process_Kill()
+  
+  lblInfo.Text = ("Completed!")
+  
+End
+
+Public Sub btnSelecionarTudo_Click()
+  
+  cvArquivosInfectados.SelectAll()
+  
+End
+
+Public Sub Form_Close()
+  
+  Dim sTerm As String 
+  
+  Shell "killall clamscan" Wait To sTerm
+  
+End
+
+Public Sub btnRemover_Click()
+  
+  If cvArquivosInfectados.Selection.Count > 0 Then 
+    If Message.Question(("Do you want to delete the selected files?"), ("Yes"), ("No")) = 1 Then
+      For Each row As String In cvArquivosInfectados.Selection
+        Try Kill row
+        cvArquivosInfectados[row][1] = ("Deleted")
+      Next 
+    Endif
+  Endif 
+  
+End

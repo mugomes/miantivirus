@@ -1,0 +1,31 @@
+' Gambas class file
+
+' Copyright (C) 2004-2024 Murilo Gomes Julio
+' SPDX-License-Identifier: GPL-2.0-only
+
+' Mestre da Info
+' Site: https://www.mestredainfo.com.br
+
+Public Sub Form_Open()
+  
+  Shell "pkexec sh -c 'killall freshclam;freshclam'" For Read As "Process"
+  
+End
+
+Public Sub Process_Read()
+  
+  Dim sLine As String
+  
+  sLine = Read #Last, -256
+  
+  If Not IsNull(Trim(sLine)) Then     
+    lstInfo.Add(Trim(sLine))
+  Endif 
+  
+End
+
+Public Sub Process_Kill()
+  
+  lblInfo.Text = ("Completed!")
+  
+End
