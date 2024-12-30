@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: miantivirus 3.18.0\n"
-"PO-Revision-Date: 2024-12-27 18:19 UTC\n"
-"Last-Translator: Murilo Gomes Julio <contatomestredainfo@gmail.com>\n"
+"PO-Revision-Date: 2024-12-30 13:51 UTC\n"
+"Last-Translator: Mestre da Info <contatomestredainfo@gmail.com>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,11 +13,19 @@ msgstr ""
 msgid "0 = Any Size"
 msgstr "0 = Qualquer Tamanho"
 
+#: FMain.class:76
+msgid "<b>clamscan</b> was not found!"
+msgstr "<b>clamscan</b> não foi encontrado!"
+
+#: FMain.class:81
+msgid "<b>pkexec</b> was not found!"
+msgstr "<b>pkexec</b> não foi encontrado!"
+
 #: FMain.form:44
 msgid "About"
 msgstr "Sobre"
 
-#: FAbout.form:17 FMain.form:61
+#: FAbout.form:18 FMain.form:61
 msgid "About MIAntivirus"
 msgstr "Sobre MIAntivirus"
 
@@ -186,6 +194,10 @@ msgstr "Ferramentas"
 #: FAtualizarDB.form:10 FMain.form:32
 msgid "Update Database"
 msgstr "Atualizar Banco de Dados"
+
+#: FAbout.class:19
+msgid "Version:"
+msgstr "Versão:"
 
 #: FVerificar.class:140
 msgid "Yes"

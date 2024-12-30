@@ -2,9 +2,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: miantivirus 3.18.0\n"
-"POT-Creation-Date: 2024-12-27 18:19 UTC\n"
-"PO-Revision-Date: 2024-12-27 18:19 UTC\n"
-"Last-Translator: Murilo Gomes Julio <contatomestredainfo@gmail.com>\n"
+"POT-Creation-Date: 2024-12-30 13:52 UTC\n"
+"PO-Revision-Date: 2024-12-30 13:50 UTC\n"
+"Last-Translator: Mestre da Info <contatomestredainfo@gmail.com>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,9 +22,9 @@ msgid ""
 "The MIAntivirus is under license GPL-2.0-only"
 msgstr ""
 
-#: FAbout.form:17 FMain.form:61
-msgid "About MIAntivirus"
-msgstr "Sobre MIAntivirus"
+#: FAbout.class:19
+msgid "Version:"
+msgstr "Versão:"
 
 #: FAtualizarDB.class:29 FVerificar.class:119
 msgid "Completed!"
@@ -66,6 +66,14 @@ msgstr "Selecionar Pasta"
 msgid "File or folder already added!"
 msgstr "Arquivo ou pasta já adicionado!"
 
+#: FMain.class:76
+msgid "<b>clamscan</b> was not found!"
+msgstr "<b>clamscan</b> não foi encontrado!"
+
+#: FMain.class:81
+msgid "<b>pkexec</b> was not found!"
+msgstr "<b>pkexec</b> não foi encontrado!"
+
 #: FMain.form:29
 msgid "Tools"
 msgstr "Ferramentas"
@@ -85,6 +93,10 @@ msgstr "Verificar Atualização"
 #: FMain.form:54
 msgid "Support MIAntivirus"
 msgstr "Apoie MIAntivirus"
+
+#: FMain.form:61
+msgid "About MIAntivirus"
+msgstr "Sobre MIAntivirus"
 
 #: FMain.form:68
 msgid "Select files or folders"

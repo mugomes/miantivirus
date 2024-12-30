@@ -13,3 +13,9 @@ Public Sub URLLabel1_Click()
   Shell "xdg-open \"https://www.mestredainfo.com.br\"" To sTerm
   
 End
+
+Public Sub Form_Open()
+
+  lblVersion.Text = ("Version:") & " " & Application.Version
+
+End
