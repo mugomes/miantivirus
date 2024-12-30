@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: miantivirus 3.18.0\n"
-"PO-Revision-Date: 2024-08-29 18:07 UTC\n"
+"PO-Revision-Date: 2024-12-27 18:19 UTC\n"
 "Last-Translator: Murilo Gomes Julio <contatomestredainfo@gmail.com>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -13,15 +13,15 @@ msgstr ""
 msgid "0 = Any Size"
 msgstr "0 = Cualquier tamaño"
 
-#: FMain.form:41
+#: FMain.form:44
 msgid "About"
 msgstr "Acerca de"
 
-#: FMain.form:51
+#: FAbout.form:17 FMain.form:61
 msgid "About MIAntivirus"
 msgstr "Acerca de MIAntivirus"
 
-#: FMain.form:68 FOpcoes.form:122
+#: FMain.form:78 FOpcoes.form:122
 msgid "Add"
 msgstr "Agregar"
 
@@ -49,16 +49,15 @@ msgstr "Verificar archivos simbólicos"
 msgid "Check symbolic folders"
 msgstr "Verificar carpetas simbólicas"
 
+#: FMain.form:47
+msgid "Check Update"
+msgstr "Verificar actualización"
+
 #: FAtualizarDB.class:29 FVerificar.class:119
 msgid "Completed!"
 msgstr "¡Terminado!"
 
-# gb-ignore
-#: FAbout.form:40
-msgid "Copyright (C) 2004-2024 Murilo Gomes Julio"
-msgstr ""
-
-#: FVerificar.class:142
+#: FVerificar.class:143
 msgid "Deleted"
 msgstr "Eliminado"
 
@@ -66,11 +65,7 @@ msgstr "Eliminado"
 msgid "Detect PUA (Potentially Unwanted Application)"
 msgstr "Detectar PUA (aplicación potencialmente no deseada)"
 
-#: FAbout.form:46
-msgid "Developed by: Murilo Gomes Julio"
-msgstr "Developed by: Murilo Gomes Julio"
-
-#: FVerificar.class:139
+#: FVerificar.class:140
 msgid "Do you want to delete the selected files?"
 msgstr "¿Quieres eliminar los archivos seleccionados?"
 
@@ -114,10 +109,6 @@ msgstr "Ignorar archivos"
 msgid "Ignore Folders"
 msgstr "Ignorar carpetas"
 
-#: FAbout.form:66
-msgid "License: GPL-2.0-only"
-msgstr "License: GPL-2.0-only"
-
 #: FVerificar.form:25
 msgid "List of Infected Files:"
 msgstr "Lista de archivos infectados:"
@@ -127,34 +118,19 @@ msgid "Loading..."
 msgstr "Cargando..."
 
 # gb-ignore
-#: FOpcoes.form:99
-msgid "M"
-msgstr ""
-
-# gb-ignore
-#: FAbout.form:56
-msgid "Mestre da Info"
-msgstr ""
-
-# gb-ignore
-#: .project:1 FAbout.form:17 FMain.form:21 FVerificar.form:14
+#: .project:1 FMain.form:24 FVerificar.form:14
 msgid "MIAntivirus"
 msgstr ""
 
-# gb-ignore
-#: FAbout.form:31
-msgid "MIAntivirus is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, only version 2 of the License.\n\nMIAntivirus is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details."
-msgstr ""
-
-#: FVerificar.class:139
+#: FVerificar.class:140
 msgid "No"
 msgstr "No"
 
-#: FMain.form:36 FOpcoes.form:30
+#: FMain.form:39 FOpcoes.form:30
 msgid "Options"
 msgstr "Opciones"
 
-#: FMain.form:63 FOpcoes.form:117 FVerificar.form:37
+#: FMain.form:73 FOpcoes.form:117 FVerificar.form:37
 msgid "Remove"
 msgstr "Eliminar"
 
@@ -162,7 +138,7 @@ msgstr "Eliminar"
 msgid "Save"
 msgstr "Ahorrar"
 
-#: FMain.form:73 FOpcoes.form:42
+#: FMain.form:83 FOpcoes.form:42
 msgid "Scan"
 msgstr "Escanear"
 
@@ -178,10 +154,6 @@ msgstr "Escanear archivos ocultos"
 msgid "Scan mail"
 msgstr "Escanear correo"
 
-#: FAbout.form:71
-msgid "Scans files and folders for viruses using ClamAV."
-msgstr "Analiza archivos y carpetas en busca de virus utilizando ClamAV."
-
 # gb-ignore
 #: .project:2
 msgid "Scans files and folders for viruses using ClamAV.\nThe MIAntivirus is under license GPL-2.0-only"
@@ -195,7 +167,7 @@ msgstr "Seleccionar todo"
 msgid "Select Files"
 msgstr "Seleccionar archivos"
 
-#: FMain.form:58
+#: FMain.form:68
 msgid "Select files or folders"
 msgstr "Seleccionar archivos o carpetas"
 
@@ -203,28 +175,19 @@ msgstr "Seleccionar archivos o carpetas"
 msgid "Select Folder"
 msgstr "Seleccionar carpeta"
 
-# gb-ignore
-#: FAbout.form:51
-msgid "Site:"
-msgstr ""
-
-#: FMain.form:44
+#: FMain.form:54
 msgid "Support MIAntivirus"
 msgstr "Soporte MIAntivirus"
 
-#: FMain.form:26
+#: FMain.form:29
 msgid "Tools"
 msgstr "Herramientas"
 
-#: FAtualizarDB.form:10 FMain.form:29
+#: FAtualizarDB.form:10 FMain.form:32
 msgid "Update Database"
 msgstr "Actualizar base de datos"
 
-#: FAbout.form:61
-msgid "www.mestredainfo.com.br"
-msgstr "www.mestredainfo.com.br"
-
-#: FVerificar.class:139
+#: FVerificar.class:140
 msgid "Yes"
 msgstr "Sí"
 

@@ -72,6 +72,16 @@ End
 
 Public Sub Form_Open()
   
+  If Exist("/usr/bin/clamscan") = False Then
+    Message.Error(("<b>clamscan</b> was not found!"))
+    Quit
+  Endif
+  
+  If Exist("/usr/bin/pkexec") = False Then
+    Message.Error(("<b>pkexec</b> was not found!"))
+    Quit
+  Endif
+  
   cvArquivos.Columns.Count = 1
   cvArquivos.Columns[0].Text = ("File")
   cvArquivos.Header = True
@@ -95,5 +105,13 @@ End
 Public Sub URLLabel1_Click()
 
   mnuApoie_Click
+
+End
+
+Public Sub mnuCheckUpdate_Click()
+
+  Dim sTerm As String = ""
+  
+  Shell "xdg-open \"https://www.mestredainfo.com.br/2024/12/miantivirus.html\"" To sTerm
 
 End

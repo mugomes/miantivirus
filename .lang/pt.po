@@ -2,77 +2,28 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: miantivirus 3.18.0\n"
-"POT-Creation-Date: 2024-08-26 15:22 UTC\n"
-"PO-Revision-Date: 2024-08-26 14:57 UTC\n"
+"PO-Revision-Date: 2024-12-27 18:19 UTC\n"
 "Last-Translator: Murilo Gomes Julio <contatomestredainfo@gmail.com>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# gb-ignore
-#: .project:1 FAbout.form:17 FMain.form:21 FVerificar.form:14
-msgid "MIAntivirus"
-msgstr ""
+#: FOpcoes.form:104
+msgid "0 = Any Size"
+msgstr "0 = Qualquer Tamanho"
 
-# gb-ignore
-#: .project:2
-msgid ""
-"Scans files and folders for viruses using ClamAV.\n"
-"The MIAntivirus is under license GPL-2.0-only"
-msgstr ""
+#: FMain.form:44
+msgid "About"
+msgstr "Sobre"
 
-# gb-ignore
-#: FAbout.form:31
-msgid ""
-"MIAntivirus is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, only version 2 of the License.\n"
-"\n"
-"MIAntivirus is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details."
-msgstr ""
+#: FAbout.form:17 FMain.form:61
+msgid "About MIAntivirus"
+msgstr "Sobre MIAntivirus"
 
-# gb-ignore
-#: FAbout.form:40
-msgid "Copyright (C) 2004-2024 Murilo Gomes Julio"
-msgstr ""
-
-#: FAbout.form:46
-msgid "Developed by: Murilo Gomes Julio"
-msgstr "Desenvolvido por: Murilo Gomes Julio"
-
-# gb-ignore
-#: FAbout.form:51
-msgid "Site:"
-msgstr ""
-
-# gb-ignore
-#: FAbout.form:56
-msgid "Mestre da Info"
-msgstr ""
-
-# gb-ignore
-#: FAbout.form:61
-msgid "www.mestredainfo.com.br"
-msgstr ""
-
-#: FAbout.form:66
-msgid "License: GPL-2.0-only"
-msgstr "Licença: GPL-2.0-only"
-
-#: FAbout.form:71
-msgid "Scans files and folders for viruses using ClamAV."
-msgstr "Verifica arquivos e pastas em busca de vírus utilizando o ClamAV."
-
-#: FAtualizarDB.class:29 FVerificar.class:119
-msgid "Completed!"
-msgstr "Concluído!"
-
-#: FAtualizarDB.form:10 FMain.form:29
-msgid "Update Database"
-msgstr "Atualizar Banco de Dados"
-
-#: FAtualizarDB.form:17
-msgid "Checking for updates"
-msgstr "Verificando atualizações"
+#: FMain.form:78 FOpcoes.form:122
+msgid "Add"
+msgstr "Adicionar"
 
 #: FMain.class:23
 msgid "Add file or folder?"
@@ -82,155 +33,161 @@ msgstr "Adicionar arquivo ou pasta?"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: FMain.class:23
-msgid "File"
-msgstr "Arquivo"
+#: FVerificar.form:48
+msgid "Checking:"
+msgstr "Verificando:"
 
-#: FMain.class:23
-msgid "Folder"
-msgstr "Pasta"
-
-#: FMain.class:26 FOpcoes.class:97
-msgid "Select Files"
-msgstr "Selecionar Arquivos"
-
-#: FMain.class:36 FOpcoes.class:80
-msgid "Select Folder"
-msgstr "Selecionar Pasta"
-
-#: FMain.class:44
-msgid "File or folder already added!"
-msgstr "Arquivo ou pasta já adicionado!"
-
-#: FMain.form:26
-msgid "Tools"
-msgstr "Ferramentas"
-
-#: FMain.form:36 FOpcoes.form:30
-msgid "Options"
-msgstr "Opções"
-
-#: FMain.form:41
-msgid "About"
-msgstr "Sobre"
-
-#: FMain.form:44
-msgid "Support MIAntivirus"
-msgstr "Apoie MIAntivirus"
-
-#: FMain.form:51
-msgid "About MIAntivirus"
-msgstr "Sobre MIAntivirus"
-
-#: FMain.form:58
-msgid "Select files or folders"
-msgstr "Selecionar arquivos ou pastas"
-
-#: FMain.form:63 FOpcoes.form:117 FVerificar.form:37
-msgid "Remove"
-msgstr "Remover"
-
-#: FMain.form:68 FOpcoes.form:122
-msgid "Add"
-msgstr "Adicionar"
-
-#: FMain.form:73 FOpcoes.form:42
-msgid "Scan"
-msgstr "Escanear"
-
-#: FOpcoes.form:38
-msgid "General"
-msgstr "Geral"
-
-#: FOpcoes.form:48
-msgid "Scan compressed files"
-msgstr "Escanear arquivos compactados"
-
-#: FOpcoes.form:54
-msgid "Check symbolic folders"
-msgstr "Verificar pastas simbólicas"
-
-#: FOpcoes.form:60
-msgid "Scan hidden files"
-msgstr "Escanear arquivos ocultos"
-
-#: FOpcoes.form:66
-msgid "Heuristic scanning"
-msgstr "Escaneamento heurística"
-
-#: FOpcoes.form:72
-msgid "Detect PUA (Potentially Unwanted Application)"
-msgstr "Detectar PUA (Aplicativo Potencialmente Indesejado)"
+#: FAtualizarDB.form:17
+msgid "Checking for updates"
+msgstr "Verificando atualizações"
 
 #: FOpcoes.form:78
 msgid "Check symbolic files"
 msgstr "Verificar arquivos simbólicos"
 
-#: FOpcoes.form:84
-msgid "Scan mail"
-msgstr "Escanear E-mail"
+#: FOpcoes.form:54
+msgid "Check symbolic folders"
+msgstr "Verificar pastas simbólicas"
 
-#: FOpcoes.form:90
-msgid "File Size for Scanning"
-msgstr "Tamanho do Arquivo para escaneamento"
+#: FMain.form:47
+msgid "Check Update"
+msgstr "Verificar Atualização"
 
-# gb-ignore
-#: FOpcoes.form:99
-msgid "M"
-msgstr ""
+#: FAtualizarDB.class:29 FVerificar.class:119
+msgid "Completed!"
+msgstr "Concluído!"
 
-#: FOpcoes.form:104
-msgid "0 = Any Size"
-msgstr "0 = Qualquer Tamanho"
+#: FVerificar.class:143
+msgid "Deleted"
+msgstr "Excluído"
 
-#: FOpcoes.form:108
-msgid "Ignore"
-msgstr "Ignorar"
+#: FOpcoes.form:72
+msgid "Detect PUA (Potentially Unwanted Application)"
+msgstr "Detectar PUA (Aplicativo Potencialmente Indesejado)"
 
-#: FOpcoes.form:112
-msgid "Ignore Folders"
-msgstr "Ignorar Pastas"
+#: FVerificar.class:140
+msgid "Do you want to delete the selected files?"
+msgstr "Deseja excluir os arquivos selecionados?"
 
-#: FOpcoes.form:134
-msgid "Ignore Files"
-msgstr "Ignorar Arquivos"
+#: FMain.class:23
+msgid "File"
+msgstr "Arquivo"
 
-#: FOpcoes.form:158
-msgid "Save"
-msgstr "Salvar"
-
-#: FVerificar.class:15
-msgid "Loading..."
-msgstr "Carregando..."
+#: FMain.class:44
+msgid "File or folder already added!"
+msgstr "Arquivo ou pasta já adicionado!"
 
 #: FVerificar.class:17
 msgid "Files"
 msgstr "Arquivos"
 
-#: FVerificar.class:139
-msgid "Do you want to delete the selected files?"
-msgstr "Deseja excluir os arquivos selecionados?"
+#: FOpcoes.form:90
+msgid "File Size for Scanning"
+msgstr "Tamanho do Arquivo para escaneamento"
 
-#: FVerificar.class:139
-msgid "No"
-msgstr "Não"
+#: FMain.class:23
+msgid "Folder"
+msgstr "Pasta"
 
-#: FVerificar.class:139
-msgid "Yes"
-msgstr "Sim"
+#: FOpcoes.form:38
+msgid "General"
+msgstr "Geral"
 
-#: FVerificar.class:142
-msgid "Deleted"
-msgstr "Excluído"
+#: FOpcoes.form:66
+msgid "Heuristic scanning"
+msgstr "Escaneamento heurística"
+
+#: FOpcoes.form:108
+msgid "Ignore"
+msgstr "Ignorar"
+
+#: FOpcoes.form:134
+msgid "Ignore Files"
+msgstr "Ignorar Arquivos"
+
+#: FOpcoes.form:112
+msgid "Ignore Folders"
+msgstr "Ignorar Pastas"
 
 #: FVerificar.form:25
 msgid "List of Infected Files:"
 msgstr "Lista de Arquivos Infectados"
 
+#: FVerificar.class:15
+msgid "Loading..."
+msgstr "Carregando..."
+
+# gb-ignore
+#: .project:1 FMain.form:24 FVerificar.form:14
+msgid "MIAntivirus"
+msgstr ""
+
+#: FVerificar.class:140
+msgid "No"
+msgstr "Não"
+
+#: FMain.form:39 FOpcoes.form:30
+msgid "Options"
+msgstr "Opções"
+
+#: FMain.form:73 FOpcoes.form:117 FVerificar.form:37
+msgid "Remove"
+msgstr "Remover"
+
+#: FOpcoes.form:158
+msgid "Save"
+msgstr "Salvar"
+
+#: FMain.form:83 FOpcoes.form:42
+msgid "Scan"
+msgstr "Escanear"
+
+#: FOpcoes.form:48
+msgid "Scan compressed files"
+msgstr "Escanear arquivos compactados"
+
+#: FOpcoes.form:60
+msgid "Scan hidden files"
+msgstr "Escanear arquivos ocultos"
+
+#: FOpcoes.form:84
+msgid "Scan mail"
+msgstr "Escanear E-mail"
+
+# gb-ignore
+#: .project:2
+msgid "Scans files and folders for viruses using ClamAV.\nThe MIAntivirus is under license GPL-2.0-only"
+msgstr ""
+
 #: FVerificar.form:42
 msgid "Select All"
 msgstr "Selecionar Tudo"
 
-#: FVerificar.form:48
-msgid "Checking:"
-msgstr "Verificando:"
+#: FMain.class:26 FOpcoes.class:97
+msgid "Select Files"
+msgstr "Selecionar Arquivos"
+
+#: FMain.form:68
+msgid "Select files or folders"
+msgstr "Selecionar arquivos ou pastas"
+
+#: FMain.class:36 FOpcoes.class:80
+msgid "Select Folder"
+msgstr "Selecionar Pasta"
+
+#: FMain.form:54
+msgid "Support MIAntivirus"
+msgstr "Apoie MIAntivirus"
+
+#: FMain.form:29
+msgid "Tools"
+msgstr "Ferramentas"
+
+#: FAtualizarDB.form:10 FMain.form:32
+msgid "Update Database"
+msgstr "Atualizar Banco de Dados"
+
+#: FVerificar.class:140
+msgid "Yes"
+msgstr "Sim"
+
