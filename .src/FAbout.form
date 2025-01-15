@@ -27,7 +27,7 @@
     MoveScaled(1,24,66,4)
     #Translate = False
     Alignment = Align.TopLeft
-    Text = "Copyright (C) 2004-2024 Murilo Gomes Julio"
+    Text = "Copyright (C) 2004-2025 Murilo Gomes Julio"
   }
   { Label3 Label
     MoveScaled(1,13,66,4)

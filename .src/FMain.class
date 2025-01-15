@@ -1,6 +1,6 @@
 ' Gambas class file
 
-' Copyright (C) 2004-2024 Murilo Gomes Julio
+' Copyright (C) 2004-2025 Murilo Gomes Julio
 ' SPDX-License-Identifier: GPL-2.0-only
 
 ' Mestre da Info
@@ -95,10 +95,8 @@ Public Sub mnuSobre_Click()
 End
 
 Public Sub mnuApoie_Click()
-  
-  Dim sTerm As String = ""
-  
-  Shell "xdg-open \"https://www.mestredainfo.com.br/p/apoie.html\"" To sTerm
+
+  Shell "xdg-open \"https://www.mestredainfo.com.br/p/apoie.html\""
   
 End
 
@@ -110,8 +108,6 @@ End
 
 Public Sub mnuCheckUpdate_Click()
 
-  Dim sTerm As String = ""
-  
-  Shell "xdg-open \"https://www.mestredainfo.com.br/2024/12/miantivirus.html\"" To sTerm
+  Shell "xdg-open \"https://www.mestredainfo.com.br/2024/12/miantivirus.html\""
 
 End
