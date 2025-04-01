@@ -4,7 +4,7 @@ Scans files and folders for viruses using ClamAV.
 
 ## Information
 
-- [Page MIAntivirus](https://www.mestredainfo.com.br/p/miantivirus.html)
+- [Page MIAntivirus](https://www.mestredainfo.com.br/p/softwares.html)
 
 ## License
 
