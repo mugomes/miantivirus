@@ -1,4 +1,4 @@
-#---- Gambas files to ignore (v5)
+#---- Gambas files to ignore (v7)
 *.gambas
 .lock
 *~
@@ -15,4 +15,6 @@ vgcore.*
 .list
 .info
 .fuse_hidden*
+.profile/*
+.desc/*
 #----

@@ -108,6 +108,6 @@ End
 
 Public Sub mnuCheckUpdate_Click()
 
-  Shell "xdg-open \"https://www.mestredainfo.com.br/2024/12/miantivirus.html\""
+  Shell "xdg-open \"https://www.mestredainfo.com.br/p/softwares.html\""
 
 End
