@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,82,62)
+  MoveScaled(0,0,82,57)
   Font = Font["12"]
   Text = ("MIAntivirus")
   Icon = Picture["miantivirus.png"]
@@ -23,11 +23,6 @@
       Text = ("Check Update")
     }
     { Menu4 Menu
-    }
-    { mnuApoie Menu
-      Text = ("Support MIAntivirus")
-    }
-    { Menu5 Menu
     }
     { mnuSobre Menu
       Text = ("About MIAntivirus")
@@ -56,11 +51,5 @@
     Mode = Select.Multiple
     Resizable = True
     ShowCheck = True
-  }
-  { URLLabel1 URLLabel
-    MoveScaled(0,53,82,3)
-    Font = Font["Bold,9"]
-    Alignment = Align.Center
-    Text = ("Support MIAntivirus")
   }
 }

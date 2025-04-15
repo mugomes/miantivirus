@@ -15,7 +15,7 @@
     Text = "MIAntivirus"
   }
   { TextArea1 TextArea
-    MoveScaled(1,33,71,28)
+    MoveScaled(1,29,71,32)
     #Translate = False
     Font = Font["11"]
     Text = "MIAntivirus is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, only version 2 of the License.\n\nMIAntivirus is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details."
@@ -24,44 +24,39 @@
     ScrollBar = Scroll.Vertical
   }
   { Label1 Label
-    MoveScaled(1,24,66,4)
+    MoveScaled(1,20,66,4)
     #Translate = False
     Alignment = Align.TopLeft
-    Text = "Copyright (C) 2004-2025 Murilo Gomes Julio"
+    Text = "Copyright (C) 2025 Murilo Gomes Julio"
   }
   { Label3 Label
-    MoveScaled(1,13,66,4)
+    MoveScaled(1,9,66,4)
     #Translate = False
     Alignment = Align.TopLeft
     Text = "Developed by: Murilo Gomes Julio"
   }
   { Label4 Label
-    MoveScaled(1,20,37,4)
+    MoveScaled(1,16,37,4)
     #Translate = False
     Text = "Site:"
   }
   { Label5 Label
-    MoveScaled(1,16,32,4)
+    MoveScaled(1,12,32,4)
     #Translate = False
     Text = "Mestre da Info"
   }
   { URLLabel1 URLLabel
-    MoveScaled(6,20,42,4)
+    MoveScaled(6,16,42,4)
     #Translate = False
     Text = "www.mestredainfo.com.br"
   }
   { Label6 Label
-    MoveScaled(1,27,30,5)
+    MoveScaled(1,23,30,5)
     #Translate = False
     Text = "License: GPL-2.0-only"
   }
-  { Label7 Label
-    MoveScaled(1,5,70,3)
-    #Translate = False
-    Text = "Scans files and folders for viruses using ClamAV."
-  }
   { lblVersion Label
-    MoveScaled(1,9,70,3)
+    MoveScaled(1,5,70,3)
     #Translate = False
     Text = "Version:"
   }

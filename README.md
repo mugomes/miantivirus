@@ -1,10 +1,10 @@
 # MIAntivirus
 
-Scans files and folders for viruses using ClamAV.
+MIAntivirus is a graphical interface for ClamAV that allows you to scan your computer for viruses and easily update the virus definition database through a user-friendly interface.
 
 ## Information
 
-- [Page MIAntivirus](https://www.mestredainfo.com.br/p/softwares.html)
+- [Page MIAntivirus](https://www.mestredainfo.com.br/p/miantivirus.html)
 
 ## License
 

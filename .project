@@ -2,13 +2,13 @@
 Title=MIAntivirus
 Startup=FMain
 Icon=miantivirus.png
-Version=1.0.3
+Version=1.0.4
 Component=gb.image
 Component=gb.gtk3
 Component=gb.form
 Component=gb.pcre
 Component=gb.settings
-Description="Scans files and folders for viruses using ClamAV.\nThe MIAntivirus is under license GPL-2.0-only"
+Description="MIAntivirus is a graphical interface for ClamAV that allows you to scan your computer for viruses and easily update the virus definition database through a user-friendly interface.\nThe MIAntivirus is under license GPL-2.0-only"
 Authors="Murilo Gomes Julio <contatomestredainfo@gmail.com>"
 TabSize=2
 Translate=1
