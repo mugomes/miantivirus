@@ -99,3 +99,9 @@ Public Sub mnuCheckUpdate_Click()
   Shell "xdg-open \"https://www.mestredainfo.com.br/p/miantivirus.html\""
 
 End
+
+Public Sub mnuApoie_Click()
+
+  Shell "xdg-open \"https://www.mestredainfo.com.br/p/contato.html#apoie\""
+
+End

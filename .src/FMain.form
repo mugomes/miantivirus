@@ -22,6 +22,11 @@
     { mnuCheckUpdate Menu
       Text = ("Check Update")
     }
+    { Menu5 Menu
+    }
+    { mnuApoie Menu
+      Text = ("Support MIAntivirus")
+    }
     { Menu4 Menu
     }
     { mnuSobre Menu
