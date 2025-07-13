@@ -3,8 +3,7 @@
 ' Copyright (C) 2025 Murilo Gomes Julio
 ' SPDX-License-Identifier: GPL-2.0-only
 
-' Mestre da Info
-' Site: https://www.mestredainfo.com.br
+' Site: https://www.mugomes.com.br
 
 Public Sub mnuAtualizarDB_Click()
   
@@ -96,12 +95,12 @@ End
 
 Public Sub mnuCheckUpdate_Click()
 
-  Shell "xdg-open \"https://www.mestredainfo.com.br/p/miantivirus.html\""
+  Shell "xdg-open \"https://www.mugomes.com.br/2025/07/miantivirus.html\""
 
 End
 
 Public Sub mnuApoie_Click()
 
-  Shell "xdg-open \"https://www.mestredainfo.com.br/p/apoie.html\""
+  Shell "xdg-open \"https://apoia.se/softwareslivresparalinux\""
 
 End

@@ -3,12 +3,11 @@
 ' Copyright (C) 2025 Murilo Gomes Julio
 ' SPDX-License-Identifier: GPL-2.0-only
 
-' Mestre da Info
-' Site: https://www.mestredainfo.com.br
+' Site: https://www.mugomes.com.br
 
 Public Sub URLLabel1_Click()
 
-  Shell "xdg-open \"https://www.mestredainfo.com.br\""
+  Shell "xdg-open \"https://www.mugomes.com.br\""
   
 End
 

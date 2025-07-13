@@ -3,7 +3,7 @@
 { Form Form
   MoveScaled(0,0,82,57)
   Font = Font["12"]
-  Text = ("MIAntivirus")
+  Text = ("MiAntivirus")
   Icon = Picture["miantivirus.png"]
   Resizable = False
   { Menu1 Menu
@@ -25,16 +25,16 @@
     { Menu5 Menu
     }
     { mnuApoie Menu
-      Text = ("Support MIAntivirus")
+      Text = ("Support MiAntivirus")
     }
     { Menu4 Menu
     }
     { mnuSobre Menu
-      Text = ("About MIAntivirus")
+      Text = ("About MiAntivirus")
     }
   }
   { Label2 Label
-    MoveScaled(2,3.4286,36,4)
+    MoveScaled(2,3.375,36,4)
     Font = Font["Bold"]
     Text = ("Select files or folders")
   }

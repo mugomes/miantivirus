@@ -3,7 +3,7 @@
 { Form Form
   MoveScaled(0,0,105,62)
   Font = Font["12"]
-  Text = ("MIAntivirus")
+  Text = ("MiAntivirus")
   Icon = Picture["miantivirus.png"]
   Resizable = False
   { lblInfo Label
