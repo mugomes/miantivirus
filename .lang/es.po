@@ -1,9 +1,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: miantivirus 3.18.0\n"
-"PO-Revision-Date: 2024-12-30 13:51 UTC\n"
-"Last-Translator: Mestre da Info <contatomestredainfo@gmail.com>\n"
+"Project-Id-Version: miantivirus 3.19.0\n"
+"PO-Revision-Date: 2025-07-13 23:08 UTC\n"
+"Last-Translator: Murilo Gomes <mugomesoficial@gmail.com>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,31 +13,31 @@ msgstr ""
 msgid "0 = Any Size"
 msgstr "0 = Cualquier tamaño"
 
-#: FMain.class:76
+#: FMain.class:75
 msgid "<b>clamscan</b> was not found!"
 msgstr "¡No se encontró <b>clamscan</b>!"
 
-#: FMain.class:81
+#: FMain.class:80
 msgid "<b>pkexec</b> was not found!"
 msgstr "¡No se encontró <b>pkexec</b>!"
 
-#: FMain.form:44
+#: FMain.form:43
 msgid "About"
 msgstr "Acerca de"
 
-#: FAbout.form:18 FMain.form:61
-msgid "About MIAntivirus"
-msgstr "Acerca de MIAntivirus"
+#: FMain.form:60
+msgid "About MiAntivirus"
+msgstr "Sobre el MiAntivirus"
 
-#: FMain.form:78 FOpcoes.form:122
+#: FMain.form:77 FOpcoes.form:122
 msgid "Add"
 msgstr "Agregar"
 
-#: FMain.class:23
+#: FMain.class:22
 msgid "Add file or folder?"
 msgstr "¿Agregar archivo o carpeta?"
 
-#: FMain.class:23
+#: FMain.class:22
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -57,15 +57,15 @@ msgstr "Verificar archivos simbólicos"
 msgid "Check symbolic folders"
 msgstr "Verificar carpetas simbólicas"
 
-#: FMain.form:47
+#: FMain.form:46
 msgid "Check Update"
 msgstr "Verificar actualización"
 
-#: FAtualizarDB.class:29 FVerificar.class:119
+#: FAtualizarDB.class:28 FVerificar.class:118
 msgid "Completed!"
 msgstr "¡Terminado!"
 
-#: FVerificar.class:143
+#: FVerificar.class:142
 msgid "Deleted"
 msgstr "Eliminado"
 
@@ -73,19 +73,19 @@ msgstr "Eliminado"
 msgid "Detect PUA (Potentially Unwanted Application)"
 msgstr "Detectar PUA (aplicación potencialmente no deseada)"
 
-#: FVerificar.class:140
+#: FVerificar.class:139
 msgid "Do you want to delete the selected files?"
 msgstr "¿Quieres eliminar los archivos seleccionados?"
 
-#: FMain.class:23
+#: FMain.class:22
 msgid "File"
 msgstr "Archivo"
 
-#: FMain.class:44
+#: FMain.class:43
 msgid "File or folder already added!"
 msgstr "¡Archivo o carpeta ya agregado!"
 
-#: FVerificar.class:17
+#: FVerificar.class:16
 msgid "Files"
 msgstr "Archivos"
 
@@ -93,7 +93,7 @@ msgstr "Archivos"
 msgid "File Size for Scanning"
 msgstr "Tamaño de archivo para escanear"
 
-#: FMain.class:23
+#: FMain.class:22
 msgid "Folder"
 msgstr "Carpeta"
 
@@ -121,24 +121,29 @@ msgstr "Ignorar carpetas"
 msgid "List of Infected Files:"
 msgstr "Lista de archivos infectados:"
 
-#: FVerificar.class:15
+#: FVerificar.class:14
 msgid "Loading..."
 msgstr "Cargando..."
 
 # gb-ignore
-#: .project:1 FMain.form:24 FVerificar.form:14
-msgid "MIAntivirus"
+#: .project:1 FMain.form:23 FVerificar.form:14
+msgid "MiAntivirus"
 msgstr ""
 
-#: FVerificar.class:140
+# gb-ignore
+#: .project:2
+msgid "MiAntivirus is a graphical interface for ClamAV that allows you to scan your computer for viruses and easily update the virus definition database through a user-friendly interface.\n\nThe MiAntivirus is under license GPL-2.0-only"
+msgstr ""
+
+#: FVerificar.class:139
 msgid "No"
 msgstr "No"
 
-#: FMain.form:39 FOpcoes.form:30
+#: FMain.form:38 FOpcoes.form:30
 msgid "Options"
 msgstr "Opciones"
 
-#: FMain.form:73 FOpcoes.form:117 FVerificar.form:37
+#: FMain.form:72 FOpcoes.form:117 FVerificar.form:37
 msgid "Remove"
 msgstr "Eliminar"
 
@@ -146,7 +151,7 @@ msgstr "Eliminar"
 msgid "Save"
 msgstr "Ahorrar"
 
-#: FMain.form:83 FOpcoes.form:42
+#: FMain.form:82 FOpcoes.form:42
 msgid "Scan"
 msgstr "Escanear"
 
@@ -162,44 +167,39 @@ msgstr "Escanear archivos ocultos"
 msgid "Scan mail"
 msgstr "Escanear correo"
 
-# gb-ignore
-#: .project:2
-msgid "Scans files and folders for viruses using ClamAV.\nThe MIAntivirus is under license GPL-2.0-only"
-msgstr ""
-
 #: FVerificar.form:42
 msgid "Select All"
 msgstr "Seleccionar todo"
 
-#: FMain.class:26 FOpcoes.class:97
+#: FMain.class:25 FOpcoes.class:96
 msgid "Select Files"
 msgstr "Seleccionar archivos"
 
-#: FMain.form:68
+#: FMain.form:67
 msgid "Select files or folders"
 msgstr "Seleccionar archivos o carpetas"
 
-#: FMain.class:36 FOpcoes.class:80
+#: FMain.class:35 FOpcoes.class:79
 msgid "Select Folder"
 msgstr "Seleccionar carpeta"
 
-#: FMain.form:54
-msgid "Support MIAntivirus"
-msgstr "Soporte MIAntivirus"
+#: FMain.form:53
+msgid "Subscribers"
+msgstr "Suscriptores"
 
-#: FMain.form:29
+#: FMain.form:28
 msgid "Tools"
 msgstr "Herramientas"
 
-#: FAtualizarDB.form:10 FMain.form:32
+#: FAtualizarDB.form:10 FMain.form:31
 msgid "Update Database"
 msgstr "Actualizar base de datos"
 
-#: FAbout.class:19
+#: FAbout.class:16
 msgid "Version:"
 msgstr "Versión:"
 
-#: FVerificar.class:140
+#: FVerificar.class:139
 msgid "Yes"
 msgstr "Sí"
 
