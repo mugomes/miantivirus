@@ -1,5 +1,5 @@
 # Gambas Project File 3.0
-Title=MIAntivirus
+Title=MiAntivirus
 Startup=FMain
 Icon=miantivirus.png
 Version=1.0.8
@@ -8,13 +8,13 @@ Component=gb.gtk3
 Component=gb.form
 Component=gb.pcre
 Component=gb.settings
-Description="MIAntivirus is a graphical interface for ClamAV that allows you to scan your computer for viruses and easily update the virus definition database through a user-friendly interface.\nThe MIAntivirus is under license GPL-2.0-only"
-Authors="Murilo Gomes Julio <contatomestredainfo@gmail.com>"
+Description="MiAntivirus is a graphical interface for ClamAV that allows you to scan your computer for viruses and easily update the virus definition database through a user-friendly interface.\nThe MiAntivirus is under license GPL-2.0-only"
+Authors="Murilo Gomes Julio <mugomesoficial@gmail.com>"
 TabSize=2
 Translate=1
 Language=en
 Maintainer=Murilo Gomes Julio
-Vendor=mestredainfo
+Vendor=mugomes
 VendorPrefix=mestredainfo
 AppId=br.com.mestredainfo.miantivirus
 Address=contatomestredainfo@gmail.com
