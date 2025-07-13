@@ -101,6 +101,6 @@ End
 
 Public Sub mnuApoie_Click()
 
-  Shell "xdg-open \"https://apoia.se/softwareslivresparalinux\""
+  Shell "xdg-open \"https://apoia.se/mugomes\""
 
 End

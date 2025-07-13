@@ -2,7 +2,7 @@
 Title=MiAntivirus
 Startup=FMain
 Icon=miantivirus.png
-Version=1.0.8
+Version=1.0.10
 Component=gb.image
 Component=gb.gtk3
 Component=gb.form
