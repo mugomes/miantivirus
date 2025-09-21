@@ -4,7 +4,7 @@ MiAntivirus is a graphical interface for ClamAV that allows you to scan your com
 
 ## Information
 
-- [Page MiAntivirus](https://www.mugomes.com.br/2025/07/miantivirus.html)
+- [Page MiAntivirus](https://mugomes.github.io/softwares/miantivirus.html)
 
 ## Support
 
