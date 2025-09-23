@@ -101,6 +101,6 @@ End
 
 Public Sub mnuApoie_Click()
 
-  Shell "xdg-open \"https://www.mugomes.com.br/p/assinantes.html\""
+  Shell "xdg-open \"https://www.mugomes.com.br/2025/07/miantivirus.html#comprar\""
 
 End
