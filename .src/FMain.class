@@ -95,12 +95,12 @@ End
 
 Public Sub mnuCheckUpdate_Click()
 
-  Shell "xdg-open \"https://www.mugomes.com.br/2025/07/miantivirus.html\""
+  Shell "xdg-open \"https://github.com/mugomes/miantivirus/releases/\""
 
 End
 
 Public Sub mnuApoie_Click()
 
-  Shell "xdg-open \"https://www.mugomes.com.br/2025/07/miantivirus.html#comprar\""
+  Shell "xdg-open \"https://www.mugomes.com.br/apoie.html\""
 
 End
