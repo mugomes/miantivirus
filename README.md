@@ -6,12 +6,12 @@ MiAntivirus is a graphical interface for ClamAV that allows you to scan your com
 
 1. Report Bugs or Suggestions:
 
-- https://github.com/mugomes/miantivirus/issues
+https://github.com/mugomes/miantivirus/issues
 
 2. Send translations for more languages:
 
-- Download the .po file, translate it
-- Submit it via Pull Request
+Download the .po file, translate it
+Submit it via Pull Request
 
 3. If you want, give MiAntivirus a "star".
 
@@ -19,8 +19,8 @@ MiAntivirus is a graphical interface for ClamAV that allows you to scan your com
 
 ## Support
 
-- [GitHub Sponsors](https://github.com/sponsors/mugomes)
-- [More](https://www.mugomes.com.br/apoie.html)
+- https://github.com/sponsors/mugomes
+- https://www.mugomes.com.br/apoie.html
 
 ## Official MiAntivirus link
 
@@ -65,11 +65,9 @@ chmod +x miantivirus/miantivirus
 ./miantivirus/miantivirus
 ```
 
-Warning: Don't do this. It's much easier to just double click a .deb or .rpm. Really, put down the source.
-
 ### Integrity
 
-To verify integrity, copy the hash provided next to the downloaded release and use MiCheckHash (graphical interface) to verify its integrity, or use the terminal.
+To verify integrity, copy the hash provided next to the downloaded release and use [MiCheckHash](https://github.com/mugomes/micheckhash/releases) (graphical interface) to verify its integrity, or use the terminal.
 
 Example:
 
@@ -87,9 +85,9 @@ Before scanning, I always recommend updating the ClamAV database. To do this, cl
 
 In Options, in the Tools menu, you can enable and disable scanning features and add and remove folders and files that you want to ignore during the scan.
 
-When you click "Scan," ClamAV will load. This process may take a while (this slowness in loading the database is due to ClamAV itself). After loading, the selected folders and files will be checked. Once the analysis is complete, you can remove infected files or folders if any viruses are detected.
+When you click "Scan," ClamAV will load, this process may take a while (this slowness in loading the database is due to ClamAV itself), after loading, the selected folders and files will be checked. Once the analysis is complete, you can remove infected files or folders if any viruses are detected.
 
-ClamAV may present some false positives, so consider whether you really want to delete them. This deletion is permanent and cannot be recovered. Therefore, be careful when deleting a file or folder.
+**Warning:** ClamAV may present some false positives, so consider whether you really want to delete them. This deletion is permanent and cannot be recovered. Therefore, be careful when deleting a file or folder.
 
 To check for new MiAntivirus updates, click Check for Updates in the About menu.
 
