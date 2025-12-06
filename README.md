@@ -32,6 +32,23 @@ MiAntivirus is a graphical interface for ClamAV that allows you to scan your com
 - https://docs.gtk.org/gtk3/
 - https://github.com/polkit-org/polkit/
 
+## Pronunciation
+
+MiAntivirus is a Portuguese name.
+
+The "Mi" part comes from the Portuguese word "Meu" (meaning "My").
+
+Its correct pronunciation is:
+
+"Mee-ahn-chee-VEE-roos"
+
+- Mi: sounds like "mee"
+- An: nasal sound, like "ahn"
+- ti: pronounced "chee" in Portuguese
+- virus: pronounced "VEE-roos", not "vai-rus"
+
+You can read it smoothly as: Mee-ahn-chee-VEE-roos
+
 ## Installation
 
 ### DEB
