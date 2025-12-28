@@ -15,7 +15,7 @@ MiAntivirus is a graphical interface for ClamAV that allows you to scan your com
 ## Support
 
 - https://github.com/sponsors/mugomes
-- https://www.mugomes.com.br/apoie.html
+- https://www.mugomes.com.br/p/apoie.html
 
 ## Official MiAntivirus link
 
@@ -27,9 +27,9 @@ MiAntivirus is a graphical interface for ClamAV that allows you to scan your com
 
 ### Links to Third-Party Resources Used
 
-- https://gambas.sourceforge.net
+- https://go.dev
+- https://fyne.io
 - https://www.clamav.net
-- https://docs.gtk.org/gtk3/
 - https://github.com/polkit-org/polkit/
 
 ## Pronunciation
@@ -58,27 +58,6 @@ Double-click the deb package and click install, or run the command in the termin
 ```bash
 sudo dpkg -i miantivirus*.deb
 sudo apt install -f
-```
-
-### AppImage
-
-A portable version will be released soon.
-
-### Source
-
-**Warning:** Don't do this. It's much easier to just double click a .deb or .appimage.
-
-Download the source code and run it:
-
-```bash
-/usr/bin/gbc3 -e -a -g -t miantivirus/
-gba3 miantivirus/
-
-mv miantivirus/miantivirus.gambas miantivirus/miantivirus
-
-chmod +x miantivirus/miantivirus
-
-./miantivirus/miantivirus
 ```
 
 ### Integrity
