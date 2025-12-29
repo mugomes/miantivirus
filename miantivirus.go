@@ -129,7 +129,7 @@ func main() {
 	flow.SetResize(lstArquivos, fyne.NewSize(window.Canvas().Size().Width, 272))
 
 	btnEscanear := widget.NewButton(c.T("Scan"), func() {
-		showScan(app)
+		showScan(app, lstArquivos.ListAll())
 	})
 
 	flow.AddColumn(
