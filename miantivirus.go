@@ -61,6 +61,7 @@ func main() {
 
 	app := app.NewWithID("br.com.mugomes.miantivirus")
 	app.Settings().SetTheme(&myDarkTheme{})
+	app.SetIcon(resourcePng)
 
 	window := app.NewWindow("MiAntivirus")
 	window.CenterOnScreen()
