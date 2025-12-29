@@ -45,7 +45,7 @@ func showScan(app fyne.App, listAll []mgcolumnview.SelectRow) {
 
 	lstArquivos := mgcolumnview.NewColumnView(
 		[]string{c.T("Files"), "", ""},
-		[]float32{38, 400, 179, 59}, true,
+		[]float32{38, 400, 179, 79}, true,
 	)
 
 	flow.AddRow(lstArquivos)
@@ -55,18 +55,23 @@ func showScan(app fyne.App, listAll []mgcolumnview.SelectRow) {
 		mgdialogbox.NewSelectDirectory(app, c.T("Save File"), false, func(s []string) {
 			if len(s) > 0 && len(lstArquivos.ListAll()) > 0 {
 				var txt strings.Builder
+				var sData string
 
-				txt.WriteString(c.T("Date: ", time.Now()))
+				txt.WriteString(c.T("Date: %v\n\n", time.Now()))
 
 				for _, result := range lstArquivos.ListAll() {
 					if len(result.Data) > 0 {
+						sData = ""
 						for _, row := range result.Data {
-							txt.WriteString(row)
+							if sData != "" {
+								sData += row + " "
+							}
 						}
+						txt.WriteString(sData + "\n\n")
 					}
 				}
 
-				if err := os.WriteFile(filepath.Join(s[0], "report.txt"), []byte(txt.String()), os.ModeAppend); err != nil {
+				if err := os.WriteFile(filepath.Join(s[0], "report.txt"), []byte(txt.String()), os.ModePerm); err != nil {
 					fmt.Println("Error: ", err.Error())
 				}
 			}
