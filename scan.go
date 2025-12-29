@@ -27,13 +27,13 @@ import (
 	"github.com/mugomes/mgsmartflow"
 )
 
-func showScan(app fyne.App, listAll [][]string) {
+func showScan(app fyne.App, listAll []mgcolumnview.SelectRow) {
 	c.LoadTranslations()
 
 	window := app.NewWindow(c.T("Scan"))
 	window.CenterOnScreen()
 	window.SetFixedSize(true)
-	window.Resize(fyne.NewSize(800, 600))
+	window.Resize(fyne.NewSize(800, 379))
 
 	flow := mgsmartflow.New()
 
@@ -41,15 +41,15 @@ func showScan(app fyne.App, listAll [][]string) {
 	lblInfo := widget.NewLabel("")
 	lblInfo.SetText(c.T("Scanning..."))
 	flow.AddColumn(lblVerificando, lblInfo)
-	flow.SetResize(lblVerificando, fyne.NewSize(100, 38))
+	flow.SetResize(lblVerificando, fyne.NewSize(79, 38))
 
 	lstArquivos := mgcolumnview.NewColumnView(
-		[]string{c.T("Files"), ""},
-		[]float32{38, 400, 400}, true,
+		[]string{c.T("Files"), "", ""},
+		[]float32{38, 400, 179, 59}, true,
 	)
 
 	flow.AddRow(lstArquivos)
-	flow.SetResize(lstArquivos, fyne.NewSize(window.Canvas().Size().Width, 272))
+	flow.SetResize(lstArquivos, fyne.NewSize(window.Canvas().Size().Width-7, 272))
 
 	btnGerarRelatorio := widget.NewButton(c.T("Generate Report"), func() {
 		mgdialogbox.NewSelectDirectory(app, c.T("Save File"), false, func(s []string) {
@@ -57,10 +57,10 @@ func showScan(app fyne.App, listAll [][]string) {
 				var txt strings.Builder
 
 				txt.WriteString(c.T("Date: ", time.Now()))
-				
+
 				for _, result := range lstArquivos.ListAll() {
-					if len(result) > 0 {
-						for _, row := range result {
+					if len(result.Data) > 0 {
+						for _, row := range result.Data {
 							txt.WriteString(row)
 						}
 					}
@@ -72,12 +72,43 @@ func showScan(app fyne.App, listAll [][]string) {
 			}
 		})
 	})
+	btnGerarRelatorio.Disable()
 
 	btnRemoverArquivo := widget.NewButton(c.T("Remove File"), func() {
+		var data string
+		lblInfo.SetText(c.T("Removing selected files..."))
+		for _, row := range lstArquivos.ListSelected() {
+			if len(row.Data) > 0 {
+				data = ""
+				for _, items := range row.Data {
+					if items != "" {
+						data += items + "|"
+					}
+				}
 
+				filename := strings.Split(data, "|")
+				if len(filename) > 0 {
+					if err := os.Remove(filename[0]); err != nil {
+						mgdialogbox.NewAlert(app, c.T("Remove File"), err.Error(), true, "Ok")
+					} else {
+						lstArquivos.UpdateColumnItem(row.ID, 2, c.T("Deleted"))
+					}
+				}
+			}
+		}
+		lblInfo.SetText(c.T("Finish"))
+	})
+	btnRemoverArquivo.Disable()
+
+	btnCancelar := widget.NewButton(c.T("Cancel"), func() {
+		run := mgrun.New("killall clamscan")
+		if err := run.Run(); err != nil {
+			fmt.Println("Error: ", err.Error())
+		}
+		window.Close()
 	})
 
-	flow.AddColumn(btnGerarRelatorio, btnRemoverArquivo)
+	flow.AddColumn(btnGerarRelatorio, btnRemoverArquivo, btnCancelar)
 
 	mgconfig := mgsettings.Load("miantivirus", true)
 
@@ -153,8 +184,7 @@ func showScan(app fyne.App, listAll [][]string) {
 	}
 
 	for _, row := range listAll {
-		sub := row
-		for _, item := range sub {
+		for _, item := range row.Data {
 			command += " \"" + item + "\""
 		}
 	}
@@ -183,7 +213,9 @@ func showScan(app fyne.App, listAll [][]string) {
 					filename := strings.TrimSpace(matches[1])
 					tipov := strings.TrimSpace(matches[2])
 
-					lstArquivos.AddRow([]string{filename, tipov})
+					fyne.Do(func() {
+						lstArquivos.AddRow([]string{filename, tipov, ""})
+					})
 				}
 			}
 		})
@@ -193,7 +225,14 @@ func showScan(app fyne.App, listAll [][]string) {
 		}
 
 		if s.ExitCode() >= 0 {
-			lblInfo.SetText(c.T("Finish"))
+			fyne.Do(func() {
+				lblInfo.SetText(c.T("Finish"))
+				if len(lstArquivos.ListAll()) > 0 {
+					btnGerarRelatorio.Enable()
+					btnRemoverArquivo.Enable()
+					btnCancelar.Disable()
+				}
+			})
 		}
 	}()
 
