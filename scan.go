@@ -2,15 +2,24 @@ package main
 
 import (
 	"fmt"
-	"os/exec"
+	"os"
+	"path/filepath"
+	"regexp"
 	"strconv"
 	"strings"
+	"time"
 
 	"fyne.io/fyne/v2"
+	"fyne.io/fyne/v2/widget"
 
 	c "mugomes/miantivirus/controls"
 
+	"github.com/mugomes/mgcolumnview"
+	"github.com/mugomes/mgdialogbox"
+	"github.com/mugomes/mgrun"
+
 	"github.com/mugomes/mgsettings/v2"
+	"github.com/mugomes/mgsmartflow"
 )
 
 func showScan(app fyne.App, listAll [][]string) {
@@ -19,6 +28,51 @@ func showScan(app fyne.App, listAll [][]string) {
 	window := app.NewWindow(c.T("Scan"))
 	window.CenterOnScreen()
 	window.SetFixedSize(true)
+	window.Resize(fyne.NewSize(800, 600))
+
+	flow := mgsmartflow.New()
+
+	lblVerificando := widget.NewLabel(c.T("Check:"))
+	lblInfo := widget.NewLabel("")
+	lblInfo.SetText(c.T("Scanning..."))
+	flow.AddColumn(lblVerificando, lblInfo)
+	flow.SetResize(lblVerificando, fyne.NewSize(100, 38))
+
+	lstArquivos := mgcolumnview.NewColumnView(
+		[]string{c.T("Files"), ""},
+		[]float32{38, 400, 400}, true,
+	)
+
+	flow.AddRow(lstArquivos)
+	flow.SetResize(lstArquivos, fyne.NewSize(window.Canvas().Size().Width, 272))
+
+	btnGerarRelatorio := widget.NewButton(c.T("Generate Report"), func() {
+		mgdialogbox.NewSelectDirectory(app, c.T("Save File"), false, func(s []string) {
+			if len(s) > 0 && len(lstArquivos.ListAll()) > 0 {
+				var txt strings.Builder
+
+				txt.WriteString(c.T("Date: ", time.Now()))
+				
+				for _, result := range lstArquivos.ListAll() {
+					if len(result) > 0 {
+						for _, row := range result {
+							txt.WriteString(row)
+						}
+					}
+				}
+
+				if err := os.WriteFile(filepath.Join(s[0], "report.txt"), []byte(txt.String()), os.ModeAppend); err != nil {
+					fmt.Println("Error: ", err.Error())
+				}
+			}
+		})
+	})
+
+	btnRemoverArquivo := widget.NewButton(c.T("Remove File"), func() {
+		
+	})
+
+	flow.AddColumn(btnGerarRelatorio, btnRemoverArquivo)
 
 	mgconfig := mgsettings.Load("miantivirus", true)
 
@@ -27,7 +81,7 @@ func showScan(app fyne.App, listAll [][]string) {
 		pua               string = " --detect-pua=no --alert-broken=no --alert-macros=no"
 		heuristica        string = " --heuristic-alerts=no"
 		arquivocompactado string = " --scan-archive=no"
-		arquivosocultos   string = ""
+		arquivosocultos   string = " --exclude=\"\\/\\.\" --exclude-dir=\"\\/\\.\""
 		arquivosimbolico  string = ""
 		pastasimbolica    string = ""
 		email             string = " --scan-mail=no"
@@ -42,8 +96,7 @@ func showScan(app fyne.App, listAll [][]string) {
 		} else if strings.Contains(s, "2)") {
 			heuristica = " --heuristic-alerts=yes"
 		} else if strings.Contains(s, "3)") {
-			arquivosocultos = " --exclude=\"\\/\\.\""
-			arquivosocultos += " --exclude-dir=\"\\/\\.\""
+			arquivosocultos = ""
 		} else if strings.Contains(s, "4)") {
 			arquivosimbolico = " --follow-file-symlinks=1"
 		} else if strings.Contains(s, "5)") {
@@ -101,8 +154,44 @@ func showScan(app fyne.App, listAll [][]string) {
 		}
 	}
 
-	sParts := strings.Fields(command)
-	sExec := exec.Command("clamscan", sParts[0:]...)
-	
+	//sParts := strings.Fields(command)
+
+	go func() {
+		s := mgrun.New("clamscan " + command)
+		pathHome, _ := os.UserHomeDir()
+		s.SetDir(pathHome)
+		s.OnStdout(func(sLine string) {
+			if sLine != "" {
+				reScanning := regexp.MustCompile(`\s/.*\.(\S+)`)
+				matchScan := reScanning.FindString(sLine)
+				if matchScan != "" {
+					filename := strings.TrimSpace(strings.ReplaceAll(matchScan, "Scanning", ""))
+					fyne.Do(func() {
+						lblInfo.SetText(filename)
+					})
+				}
+
+				reFound := regexp.MustCompile(`(/.*):\s*(.*)\sFOUND`)
+				matches := reFound.FindStringSubmatch(sLine)
+
+				if len(matches) >= 3 {
+					filename := strings.TrimSpace(matches[1])
+					tipov := strings.TrimSpace(matches[2])
+
+					lstArquivos.AddRow([]string{filename, tipov})
+				}
+			}
+		})
+
+		if err := s.Run(); err != nil {
+			fmt.Println("Error: ", err.Error())
+		}
+
+		if s.ExitCode() >= 0 {
+			lblInfo.SetText(c.T("Finish"))
+		}
+	}()
+
+	window.SetContent(flow.Container)
 	window.Show()
 }
