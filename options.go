@@ -35,13 +35,13 @@ func showOptions(app fyne.App) {
 	lblEscanear := widget.NewLabel(c.T("Scan"))
 	lblEscanear.TextStyle = fyne.TextStyle{Bold: true}
 	chkOptions := widget.NewCheckGroup([]string{
-		c.T("Detect PUA (Potentially Unwanted Application)"),
-		c.T("Heuristic scanning"),
-		c.T("Scan hidden files"),
-		c.T("Check symbolic files"),
-		c.T("Check symbolic folders"),
-		c.T("Scan compressed files"),
-		c.T("Scan Email"),
+		c.T("1) Detect PUA (Potentially Unwanted Application)"),
+		c.T("2) Heuristic scanning"),
+		c.T("3) Scan hidden files"),
+		c.T("4) Check symbolic files"),
+		c.T("5) Check symbolic folders"),
+		c.T("6) Scan compressed files"),
+		c.T("7) Scan Email"),
 	}, nil)
 
 	flowGeral.AddRow(lblEscanear)
