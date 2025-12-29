@@ -1,3 +1,8 @@
+// Copyright (C) 2024-2025 Murilo Gomes Julio
+// SPDX-License-Identifier: GPL-2.0-only
+
+// Site: https://www.mugomes.com.br
+
 package main
 
 import (
@@ -69,7 +74,7 @@ func showScan(app fyne.App, listAll [][]string) {
 	})
 
 	btnRemoverArquivo := widget.NewButton(c.T("Remove File"), func() {
-		
+
 	})
 
 	flow.AddColumn(btnGerarRelatorio, btnRemoverArquivo)
