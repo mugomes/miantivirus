@@ -63,7 +63,7 @@ func showScan(app fyne.App, listAll []mgcolumnview.SelectRow) {
 					if len(result.Data) > 0 {
 						sData = ""
 						for _, row := range result.Data {
-							if sData != "" {
+							if row != "" {
 								sData += row + " "
 							}
 						}
