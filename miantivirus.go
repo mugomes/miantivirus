@@ -82,10 +82,12 @@ func main() {
 			url, _ := url.Parse("https://www.mugomes.com.br/p/miantivirus.html")
 			app.OpenURL(url)
 		}),
-		// fyne.NewMenuItem("Seja um assinante", func() {
-		// 	url, _ := url.Parse("https://www.mugomes.com.br/p/assinantes.html")
-		// 	app.OpenURL(url)
-		// }),
+		fyne.NewMenuItemSeparator(),
+		fyne.NewMenuItem(c.T("Support MiAntivirus"), func() {
+			url, _ := url.Parse("https://www.mugomes.com.br/p/apoie.html")
+			app.OpenURL(url)
+		}),
+		fyne.NewMenuItemSeparator(),
 		fyne.NewMenuItem(c.T("About MiAntivirus"), func() {
 			showAbout(app)
 		}),
