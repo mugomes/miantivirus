@@ -103,7 +103,7 @@ func main() {
 
 	lstArquivos := mgcolumnview.NewColumnView(
 		[]string{c.T("Files")},
-		[]float32{38, 400}, true,
+		[]float32{38, 400, 100}, true,
 	)
 
 	btnAddFile := widget.NewButton(c.T("Add File"), func() {
