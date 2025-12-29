@@ -68,7 +68,9 @@ func main() {
 	window.Resize(fyne.NewSize(659, 457))
 
 	mnuTools := fyne.NewMenu(c.T("Tools"),
-		fyne.NewMenuItem(c.T("Update Database"), func() {}),
+		fyne.NewMenuItem(c.T("Update Database"), func() {
+			showUpdateDB(app)
+		}),
 		fyne.NewMenuItemSeparator(),
 		fyne.NewMenuItem(c.T("Options"), func() {
 			showOptions(app)
