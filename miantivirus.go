@@ -20,11 +20,10 @@ import (
 
 	c "mugomes/miantivirus/controls"
 
-	//"github.com/mugomes/mgsettings"
 	"github.com/mugomes/mgsmartflow"
 )
 
-const VERSION_APP string = "6.1.1"
+const VERSION_APP string = "2.0.0"
 
 type myDarkTheme struct{}
 
@@ -85,7 +84,9 @@ func main() {
 		// 	url, _ := url.Parse("https://www.mugomes.com.br/p/assinantes.html")
 		// 	app.OpenURL(url)
 		// }),
-		fyne.NewMenuItem(c.T("About MiAntivirus"), func() {}),
+		fyne.NewMenuItem(c.T("About MiAntivirus"), func() {
+			showAbout(app)
+		}),
 	)
 	window.SetMainMenu(fyne.NewMainMenu(mnuTools, mnuAbout))
 
@@ -128,7 +129,7 @@ func main() {
 	flow.SetResize(lstArquivos, fyne.NewSize(window.Canvas().Size().Width, 272))
 
 	btnEscanear := widget.NewButton(c.T("Scan"), func() {
-
+		showScan(app)
 	})
 
 	flow.AddColumn(
