@@ -57,7 +57,9 @@ func showScan(app fyne.App, listAll []mgcolumnview.SelectRow) {
 				var txt strings.Builder
 				var sData string
 
-				txt.WriteString(c.T("Date: %v\n\n", time.Now()))
+				currentTime := time.Now()
+				
+				txt.WriteString(c.T("Date: %v\n\n", currentTime.Format("2006-01-02-15-04-05")))
 
 				for _, result := range lstArquivos.ListAll() {
 					if len(result.Data) > 0 {
@@ -71,7 +73,7 @@ func showScan(app fyne.App, listAll []mgcolumnview.SelectRow) {
 					}
 				}
 
-				if err := os.WriteFile(filepath.Join(s[0], "report.txt"), []byte(txt.String()), os.ModePerm); err != nil {
+				if err := os.WriteFile(filepath.Join(s[0], fmt.Sprintf("report-%v.txt", currentTime.Format("2006-01-02-15-04-05"))), []byte(txt.String()), os.ModePerm); err != nil {
 					fmt.Println("Error: ", err.Error())
 				}
 			}
