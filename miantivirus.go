@@ -80,12 +80,12 @@ func main() {
 
 	mnuAbout := fyne.NewMenu(c.T("About"),
 		fyne.NewMenuItem(c.T("Check for Updates"), func() {
-			url, _ := url.Parse("https://mugomes.github.io/p/miantivirus.html")
+			url, _ := url.Parse("https://mugomes.github.io/softwares/miantivirus.html")
 			app.OpenURL(url)
 		}),
 		fyne.NewMenuItemSeparator(),
 		fyne.NewMenuItem(c.T("Support MiAntivirus"), func() {
-			url, _ := url.Parse("https://mugomes.github.io/p/apoie.html")
+			url, _ := url.Parse("https://mugomes.github.io/apoie.html")
 			app.OpenURL(url)
 		}),
 		fyne.NewMenuItemSeparator(),
