@@ -134,6 +134,7 @@ func showScan(app fyne.App, listAll []mgcolumnview.SelectRow) {
 
 	for _, row := range options {
 		s := row
+
 		if strings.Contains(s, "1)") {
 			pua = " --detect-pua=yes --alert-broken=yes --alert-macros=yes"
 		} else if strings.Contains(s, "2)") {
