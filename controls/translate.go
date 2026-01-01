@@ -44,7 +44,7 @@ func LoadTranslations() {
 		mglang.Set("Scanning...", "Escaneando...")
 		mglang.Set("Generate Report", "Gerar Relatório")
 		mglang.Set("Save File", "Salvar Arquivo")
-		mglang.Set("Date: %v\n\n", "Data: %v")
+		mglang.Set("Date: %v\n\n", "Data: %v\n\n")
 		mglang.Set("Remove File", "Remover Arquivo")
 		mglang.Set("Removing selected files...", "Removendo arquivos selecionados...")
 		mglang.Set("Deleted", "Excluído")
