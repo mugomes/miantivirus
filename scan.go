@@ -223,6 +223,9 @@ func showScan(app fyne.App, listAll []mgcolumnview.SelectRow) {
 					btnGerarRelatorio.Enable()
 					btnRemoverArquivo.Enable()
 					btnCancelar.Disable()
+				} else {
+					mgdialogbox.NewAlert(app, "MiAntivirus", c.T("No viruses found!"), false, "Ok")
+					window.Close()
 				}
 			})
 		}
