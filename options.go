@@ -6,6 +6,8 @@
 package main
 
 import (
+	"slices"
+
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/layout"
@@ -116,11 +118,13 @@ func showOptions(app fyne.App) {
 
 	var value []string
 	for _, row := range options {
-		value = append(value, row)
+		if slices.Contains(chkOptions.Options, row) {
+			value = append(value, row)
+		}
 	}
 
 	chkOptions.SetSelected(value)
-	txtTamanho.SetValue(int(mgconfig.GetInt("filesize", 0)))
+	txtTamanho.SetValue(mgconfig.GetInt("filesize", 0))
 
 	ignorefolders := mgconfig.GetStringSlice("ignorefolders", []string{})
 
