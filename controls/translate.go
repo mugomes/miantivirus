@@ -52,6 +52,7 @@ func LoadTranslations() {
 		mglang.Set("Update Database", "Atualizar Banco de Dados")
 		mglang.Set("Checking for updates...", "Verificando atualizações...")
 		mglang.Set("Finish", "Concluído")
+		mglang.Set("No viruses found!", "Nenhum vírus encontrado!")
 	case "es":
 		mglang.Set("Tools", "Herramientas")
 		mglang.Set("Options", "Opciones")
@@ -94,6 +95,7 @@ func LoadTranslations() {
 		mglang.Set("Update Database", "Actualizar base de datos")
 		mglang.Set("Checking for updates...", "Buscando actualizaciones...")
 		mglang.Set("Finish", "Finalizar")
+		mglang.Set("No viruses found!", "¡No se encontraron virus!")
 	}
 }
 
