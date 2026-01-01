@@ -5,11 +5,11 @@ go 1.25.5
 require (
 	fyne.io/fyne/v2 v2.7.1
 	github.com/mugomes/mgcolumnview v1.0.3
-	github.com/mugomes/mgdialogbox v1.1.0
+	github.com/mugomes/mgdialogbox v1.1.1
 	github.com/mugomes/mglang v1.0.2
 	github.com/mugomes/mgnumericentry v1.0.2
 	github.com/mugomes/mgrun v1.0.0
-	github.com/mugomes/mgsettings/v2 v2.1.1
+	github.com/mugomes/mgsettings/v3 v3.0.0
 	github.com/mugomes/mgsmartflow v1.0.1
 )
 
