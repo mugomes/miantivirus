@@ -67,7 +67,7 @@ To verify integrity, copy the hash provided next to the downloaded release and u
 Example:
 
 ```bash
-echo "sha256:7e4f667108f9ab58ccb2419269d4f533851f756c69f325d6d039808c8710e5b5 miantivirus_1.0.16-0ubuntu1_all.deb" | sha256sum -c
+echo "12f95d1ba9b46f5713d8010963c4c782e315b7985027c44c6e292ede69454301 miantivirus_2.0.0_all.deb" | sha256sum -c
 ```
 
 If "Success" is displayed, the file was downloaded correctly.
