@@ -1,14 +1,15 @@
-// Copyright (C) 2024-2025 Murilo Gomes Julio
+// Copyright (C) 2024-2026 Murilo Gomes Julio
 // SPDX-License-Identifier: GPL-2.0-only
 
-// Site: https://www.mugomes.com.br
+// Site: https://mugomes.github.io
 
 package main
 
 import (
 	c "mugomes/miantivirus/controls"
-	"github.com/mugomes/mgrun"
 	"os"
+
+	"github.com/mugomes/mgrun"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/widget"
@@ -38,9 +39,9 @@ func showUpdateDB(app fyne.App) {
 	flow.SetResize(txtResult, fyne.NewSize(window.Canvas().Size().Width, 279))
 
 	go func() {
-		// 
+		//
 		s := mgrun.New("pkexec sh -c 'killall freshclam;freshclam'")
-		pathHome,_ := os.UserHomeDir()
+		pathHome, _ := os.UserHomeDir()
 		s.SetDir(pathHome)
 		s.AddEnv("teste", "abc")
 

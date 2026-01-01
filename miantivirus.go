@@ -1,7 +1,7 @@
-// Copyright (C) 2024-2025 Murilo Gomes Julio
+// Copyright (C) 2024-2026 Murilo Gomes Julio
 // SPDX-License-Identifier: GPL-2.0-only
 
-// Site: https://www.mugomes.com.br
+// Site: https://mugomes.github.io
 
 package main
 
@@ -80,12 +80,12 @@ func main() {
 
 	mnuAbout := fyne.NewMenu(c.T("About"),
 		fyne.NewMenuItem(c.T("Check for Updates"), func() {
-			url, _ := url.Parse("https://www.mugomes.com.br/p/miantivirus.html")
+			url, _ := url.Parse("https://mugomes.github.io/p/miantivirus.html")
 			app.OpenURL(url)
 		}),
 		fyne.NewMenuItemSeparator(),
 		fyne.NewMenuItem(c.T("Support MiAntivirus"), func() {
-			url, _ := url.Parse("https://www.mugomes.com.br/p/apoie.html")
+			url, _ := url.Parse("https://mugomes.github.io/p/apoie.html")
 			app.OpenURL(url)
 		}),
 		fyne.NewMenuItemSeparator(),
