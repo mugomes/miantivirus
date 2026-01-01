@@ -14,11 +14,21 @@ import (
 	"github.com/mugomes/mgcolumnview"
 	"github.com/mugomes/mgdialogbox"
 	"github.com/mugomes/mgnumericentry"
-	"github.com/mugomes/mgsettings/v2"
+	"github.com/mugomes/mgsettings/v3"
 	"github.com/mugomes/mgsmartflow"
 
 	c "mugomes/miantivirus/controls"
 )
+
+func SelectRowsToStrings(rows []mgcolumnview.SelectRow) []string {
+	out := make([]string, 0)
+
+	for _, r := range rows {
+		out = append(out, r.Data...)
+	}
+
+	return out
+}
 
 func showOptions(app fyne.App) {
 	c.LoadTranslations()
@@ -28,7 +38,7 @@ func showOptions(app fyne.App) {
 	window.SetFixedSize(true)
 	window.Resize(fyne.NewSize(400, 600))
 
-	mgconfig := mgsettings.Load("miantivirus", true)
+	mgconfig, _ := mgsettings.Load("miantivirus", true)
 
 	flowGeral := mgsmartflow.New()
 
@@ -74,8 +84,8 @@ func showOptions(app fyne.App) {
 	flowIgnorar.AddColumn(btnIgnorarPastasAdd, btnIgnorarPastasRemove)
 	flowIgnorar.AddRow(cvIgnorarPastas)
 	flowIgnorar.SetResize(cvIgnorarPastas, fyne.NewSize(window.Canvas().Size().Width, 157))
-	
-	separator1 := widget.NewSeparator();
+
+	separator1 := widget.NewSeparator()
 	flowIgnorar.AddRow(separator1)
 
 	cvIgnorarArquivos := mgcolumnview.NewColumnView([]string{c.T("Ignore Files")}, []float32{38, 400}, true)
@@ -102,56 +112,43 @@ func showOptions(app fyne.App) {
 	)
 
 	// Load
-	options := mgconfig.Get("options", []string{}).([]interface{})
+	options := mgconfig.GetStringSlice("options", []string{})
 
 	var value []string
 	for _, row := range options {
-		value = append(value, row.(string))
+		value = append(value, row)
 	}
 
 	chkOptions.SetSelected(value)
-	txtTamanho.SetValue(int(mgconfig.Get("filesize", 0).(float64)))
+	txtTamanho.SetValue(int(mgconfig.GetInt("filesize", 0)))
 
-	ignorefolders := mgconfig.Get("ignorefolders", []string{}).([]interface{})
+	ignorefolders := mgconfig.GetStringSlice("ignorefolders", []string{})
 
 	for _, row := range ignorefolders {
-		sub, ok := row.([]interface{})
-		if !ok {
-			continue
-		}
-
-		for _, item := range sub {
-			s, ok := item.(string)
-			if ok {
-				cvIgnorarPastas.AddRow([]string{s})
-			}
+		if row != "" {
+			cvIgnorarPastas.AddRow([]string{row})
 		}
 	}
 
-	ignorefiles := mgconfig.Get("ignorefiles", []string{}).([]interface{})
+	ignorefiles := mgconfig.GetStringSlice("ignorefiles", []string{})
 
 	for _, row := range ignorefiles {
-		sub, ok := row.([]interface{})
-		if !ok {
-			continue
-		}
-
-		for _, item := range sub {
-			s, ok := item.(string)
-			if ok {
-				cvIgnorarArquivos.AddRow([]string{s})
-			}
+		if row != "" {
+			cvIgnorarArquivos.AddRow([]string{row})
 		}
 	}
-	
+
 	flowIgnorar.AddRow(widget.NewLabel(" "))
 
 	// Save
 	btnSave := widget.NewButton(c.T("Save"), func() {
-		mgconfig.Set("options", chkOptions.Selected)
-		mgconfig.Set("filesize", txtTamanho.GetValue())
-		mgconfig.Set("ignorefolders", cvIgnorarPastas.ListAll())
-		mgconfig.Set("ignorefiles", cvIgnorarArquivos.ListAll())
+		mgconfig.SetStringSlice("options", chkOptions.Selected)
+		mgconfig.SetInt("filesize", txtTamanho.GetValue())
+
+
+
+		mgconfig.SetStringSlice("ignorefolders", SelectRowsToStrings(cvIgnorarPastas.ListAll()))
+		mgconfig.SetStringSlice("ignorefiles", SelectRowsToStrings(cvIgnorarArquivos.ListAll()))
 
 		mgconfig.Save()
 		window.Close()
