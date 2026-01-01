@@ -23,7 +23,7 @@ import (
 	"github.com/mugomes/mgdialogbox"
 	"github.com/mugomes/mgrun"
 
-	"github.com/mugomes/mgsettings/v2"
+	"github.com/mugomes/mgsettings/v3"
 	"github.com/mugomes/mgsmartflow"
 )
 
@@ -58,7 +58,7 @@ func showScan(app fyne.App, listAll []mgcolumnview.SelectRow) {
 				var sData string
 
 				currentTime := time.Now()
-				
+
 				txt.WriteString(c.T("Date: %v\n\n", currentTime.Format("2006-01-02-15-04-05")))
 
 				for _, result := range lstArquivos.ListAll() {
@@ -117,7 +117,7 @@ func showScan(app fyne.App, listAll []mgcolumnview.SelectRow) {
 
 	flow.AddColumn(btnGerarRelatorio, btnRemoverArquivo, btnCancelar)
 
-	mgconfig := mgsettings.Load("miantivirus", true)
+	mgconfig, _ := mgsettings.Load("miantivirus", true)
 
 	var (
 		command           string = "--verbose --recursive=yes --no-summary"
@@ -130,10 +130,10 @@ func showScan(app fyne.App, listAll []mgcolumnview.SelectRow) {
 		email             string = " --scan-mail=no"
 		tamanho                  = 0
 	)
-	options := mgconfig.Get("options", []string{}).([]interface{})
+	options := mgconfig.GetStringSlice("options", []string{})
 
 	for _, row := range options {
-		s := row.(string)
+		s := row
 		if strings.Contains(s, "1)") {
 			pua = " --detect-pua=yes --alert-broken=yes --alert-macros=yes"
 		} else if strings.Contains(s, "2)") {
@@ -153,40 +153,24 @@ func showScan(app fyne.App, listAll []mgcolumnview.SelectRow) {
 
 	command += pua + heuristica + arquivosocultos + arquivosimbolico + pastasimbolica + arquivocompactado + email
 
-	tamanho = int(mgconfig.Get("filesize", 0).(float64))
+	tamanho = mgconfig.GetInt("filesize", 0)
 	if tamanho > 0 {
 		command += " --max-filesize=" + strconv.Itoa(tamanho) + "M"
 	}
 
-	ignorefolders := mgconfig.Get("ignorefolders", []string{}).([]interface{})
+	ignorefolders := mgconfig.GetStringSlice("ignorefolders", []string{})
 
 	for _, row := range ignorefolders {
-		sub, ok := row.([]interface{})
-		if !ok {
-			continue
-		}
-
-		for _, item := range sub {
-			s, ok := item.(string)
-			if ok {
-				command += " --exclude-dir=\"" + s + "\""
-			}
+		if row != "" {
+			command += " --exclude-dir=\"" + row + "\""
 		}
 	}
 
-	ignorefiles := mgconfig.Get("ignorefiles", []string{}).([]interface{})
+	ignorefiles := mgconfig.GetStringSlice("ignorefiles", []string{})
 
 	for _, row := range ignorefiles {
-		sub, ok := row.([]interface{})
-		if !ok {
-			continue
-		}
-
-		for _, item := range sub {
-			s, ok := item.(string)
-			if ok {
-				command += " --exclude=\"" + s + "\""
-			}
+		if row != "" {
+			command += " --exclude=\"" + row + "\""
 		}
 	}
 
