@@ -68,7 +68,7 @@ func LoadTranslations() {
 		mglang.Set("Remove from List", "Eliminar de la lista")
 		mglang.Set("Scan", "Escanear")
 		mglang.Set("1) Detect PUA (Potentially Unwanted Application)", "1) Detectar PUA (Aplicación Potencialmente no Deseada)")
-		mglang.Set("2) Heuristic scanning", "2) escaneo heurístico")
+		mglang.Set("2) Heuristic scanning", "2) Escaneo heurístico")
 		mglang.Set("3) Scan hidden files", "3) Escanear archivos ocultos")
 		mglang.Set("4) Check symbolic files", "4) Verificar archivos simbólicos")
 		mglang.Set("5) Check symbolic folders", "5) Verificar carpetas simbólicas")
