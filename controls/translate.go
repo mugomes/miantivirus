@@ -15,7 +15,7 @@ func LoadTranslations() {
 		mglang.Set("Options", "Opções")
 		mglang.Set("About", "Sobre")
 		mglang.Set("Check for Updates", "Verificar Atualizações")
-		mglang.Set("Support MiAntivirus", "Suporte MiAntivirus")
+		mglang.Set("Support MiAntivirus", "Apoie MiAntivirus")
 		mglang.Set("About MiAntivirus", "Sobre MiAntivirus")
 		mglang.Set("Files", "Arquivos")
 		mglang.Set("Add File", "Adicionar Arquivo")
