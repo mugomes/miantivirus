@@ -38,7 +38,7 @@ func showOptions(app fyne.App) {
 	window := app.NewWindow(c.T("Options"))
 	window.CenterOnScreen()
 	window.SetFixedSize(true)
-	window.Resize(fyne.NewSize(400, 600))
+	window.Resize(fyne.NewSize(500, 600))
 
 	mgconfig, _ := mgsettings.Load("miantivirus", true)
 
